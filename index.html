@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SATashkent — Score 1500+ & Get Into Your Dream University</title>
+<meta name="description" content="Tashkent's #1 SAT & admissions community. 10,000+ students, alumni at Cornell, Dartmouth, UChicago & NYU Abu Dhabi. Book a free trial lesson and placement test." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --crimson:#9E2C3B;
+    --crimson-deep:#7A1F2B;
+    --ink:#1E1014;
+    --ink-soft:#4A3A3E;
+    --ivory:#F8F3EA;
+    --ivory-2:#FBF8F1;
+    --paper:#FFFFFF;
+    --gold:#BE9B45;
+    --gold-soft:#D8BE7E;
+    --line:rgba(30,16,20,.12);
+    --shadow:0 24px 60px -28px rgba(30,16,20,.45);
+    --shadow-sm:0 10px 30px -16px rgba(30,16,20,.35);
+    --display:'Fraunces',Georgia,serif;
+    --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+    --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{width:min(1200px,92vw);margin:0 auto}
+  .display{font-family:var(--display);font-weight:600;line-height:1.02;letter-spacing:-.02em}
+  em{font-style:italic}
+  .crimson{color:var(--crimson)}
+  .gold{color:var(--gold)}
+
+  /* ===== top utility bar ===== */
+  .topbar{
+    background:var(--ink);color:var(--ivory);
+    font-size:13px;letter-spacing:.02em;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:9px 16px;text-align:center;
+  }
+  .topbar b{color:var(--gold-soft)}
+
+  /* ===== nav ===== */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(248,243,234,.86);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.01em}
+  .brand-logo{height:34px;width:auto;display:block;flex:none}
+  .brand-name{line-height:1}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:500}
+  .nav-links a{color:var(--ink-soft);transition:color .2s}
+  .nav-links a:hover{color:var(--crimson)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{font-family:var(--sans);background:none;border:0;cursor:pointer;font-size:12.5px;font-weight:700;padding:6px 12px;color:var(--ink-soft)}
+  .lang button.on{background:var(--ink);color:var(--ivory)}
+  .btn{
+    font-family:var(--sans);cursor:pointer;border:0;font-weight:700;letter-spacing:.005em;
+    border-radius:999px;transition:transform .18s ease, box-shadow .18s ease, background .18s;
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  }
+  .btn-primary{background:var(--crimson);color:#fff;padding:14px 26px;font-size:15.5px;box-shadow:0 14px 30px -14px rgba(158,44,59,.7)}
+  .btn-primary:hover{background:var(--crimson-deep);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);padding:13px 24px;font-size:15px}
+  .btn-ghost:hover{background:var(--ink);color:var(--ivory)}
+  .btn-gold{background:var(--gold);color:#1c1206;padding:14px 26px;font-size:15.5px}
+  .btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px)}
+  .nav .btn-primary{padding:11px 20px;font-size:14.5px}
+  .hamb{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+  .hamb span{width:24px;height:2px;background:var(--ink);border-radius:2px}
+
+  /* ===== hero (minimal · centered) ===== */
+  .hero{position:relative;padding:98px 0 104px;overflow:hidden;text-align:center}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(1000px 520px at 50% -14%, rgba(190,155,69,.20), transparent 62%),
+      radial-gradient(900px 560px at 50% 122%, rgba(158,44,59,.10), transparent 60%);
+  }
+  .hero::after{
+    content:"1600";position:absolute;left:50%;top:53%;transform:translate(-50%,-50%);
+    font-family:var(--display);font-weight:700;font-size:40vw;line-height:1;
+    color:rgba(158,44,59,.035);z-index:0;pointer-events:none;letter-spacing:-.04em;white-space:nowrap;
+  }
+  .hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--crimson);background:rgba(158,44,59,.08);
+    border:1px solid rgba(158,44,59,.2);padding:7px 15px;border-radius:999px;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--crimson);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+  h1.hero-title{font-family:var(--display);font-weight:600;font-size:clamp(46px,6.8vw,84px);line-height:.97;letter-spacing:-.03em;margin:28px 0 22px}
+  h1.hero-title .line2{color:var(--crimson)}
+  h1.hero-title em{display:block;font-size:.4em;color:var(--ink-soft);font-weight:500;font-style:italic;margin-top:16px;letter-spacing:-.01em}
+  .hero-sub{font-size:19px;color:var(--ink-soft);max-width:610px;margin:0 auto 26px}
+  .hero-sub b{color:var(--ink)}
+  .hero-sub.sub-mobile{display:none}
+  .offer-line{
+    display:inline-flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);
+    border-radius:999px;padding:9px 9px 9px 20px;box-shadow:var(--shadow-sm);margin-bottom:34px;font-size:15px;color:var(--ink-soft);
+  }
+  .offer-line .amt{font-family:var(--display);font-weight:600;color:var(--ink)}
+  .offer-line .free{background:var(--crimson);color:#fff;font-weight:700;font-size:13px;padding:8px 15px;border-radius:999px;letter-spacing:.01em}
+  .hero-ctas{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+  .hero-ctas .btn-primary{padding:17px 36px;font-size:16.5px}
+  .link-secondary{font-weight:600;font-size:15px;color:var(--ink);border-bottom:2px solid var(--gold);padding-bottom:2px;transition:color .2s}
+  .link-secondary:hover{color:var(--crimson)}
+  .hero-proof{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .hero-trust{display:flex;gap:9px;align-items:center;font-size:14px;color:var(--ink-soft);flex-wrap:wrap;justify-content:center}
+  .hero-trust .stars{color:var(--gold);letter-spacing:2px}
+  .score-chips{display:flex;gap:9px;flex-wrap:wrap;justify-content:center}
+  .chip{font-family:var(--mono);font-size:13px;font-weight:600;background:rgba(255,255,255,.65);border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--crimson)}
+  .chip span{color:var(--ink-soft);font-family:var(--sans);font-weight:500;margin-left:6px}
+  /* registration extras */
+  .reg-list{list-style:none;margin:22px 0 8px;display:grid;gap:11px}
+  .reg-list li{display:flex;gap:11px;align-items:center;font-size:15.5px;color:rgba(248,243,234,.9)}
+  .reg-list li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:rgba(190,155,69,.2);color:var(--gold-soft);display:grid;place-items:center;font-size:12px;font-weight:700}
+
+  /* ===== lead form ===== */
+  .form-card{
+    background:var(--paper);border-radius:22px;padding:30px 30px 26px;
+    box-shadow:var(--shadow);border:1px solid var(--line);position:relative;
+  }
+  .form-card::before{content:"";position:absolute;top:0;left:30px;right:30px;height:4px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,var(--crimson),var(--gold))}
+  .form-head{margin-bottom:18px}
+  .form-head .kf{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--crimson)}
+  .form-head h3{font-family:var(--display);font-size:27px;font-weight:600;line-height:1.08;margin:6px 0 6px}
+  .form-head p{font-size:14px;color:var(--ink-soft)}
+  .field{margin-bottom:13px}
+  .field label{display:block;font-size:12.5px;font-weight:600;color:var(--ink-soft);margin-bottom:6px}
+  .field input,.field select{
+    width:100%;font-family:var(--sans);font-size:15px;color:var(--ink);
+    padding:13px 14px;border:1.5px solid var(--line);border-radius:11px;background:var(--ivory-2);
+    transition:border-color .2s, box-shadow .2s;
+  }
+  .field input:focus,.field select:focus{outline:0;border-color:var(--crimson);box-shadow:0 0 0 3px rgba(158,44,59,.12);background:#fff}
+  .form-card .btn-primary{width:100%;margin-top:6px;padding:16px}
+  .form-fine{font-size:12px;color:var(--ink-soft);text-align:center;margin-top:11px;line-height:1.4}
+  .or{display:flex;align-items:center;gap:12px;color:var(--ink-soft);font-size:12px;margin:14px 0}
+  .or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+  .tg{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;border:1.5px solid var(--line);border-radius:11px;padding:13px;font-weight:600;font-size:14.5px;color:var(--ink);transition:.2s}
+  .tg:hover{border-color:var(--crimson);color:var(--crimson)}
+  .form-success{display:none;text-align:center;padding:24px 6px}
+  .form-success .check{width:62px;height:62px;border-radius:50%;background:rgba(158,44,59,.1);display:grid;place-items:center;margin:0 auto 16px;font-size:30px;color:var(--crimson)}
+  .form-success h3{font-family:var(--display);font-size:25px;margin-bottom:8px}
+  .form-success p{color:var(--ink-soft);font-size:15px}
+  .form-reject{display:none;text-align:center;padding:24px 6px}
+  .form-reject .check{width:62px;height:62px;border-radius:50%;background:rgba(190,155,69,.18);display:grid;place-items:center;margin:0 auto 16px;font-size:30px}
+  .form-reject h3{font-family:var(--display);font-size:24px;margin-bottom:10px}
+  .form-reject p{color:var(--ink-soft);font-size:14.5px;line-height:1.55}
+
+  /* ===== marquee stats ===== */
+  .statbar{background:var(--ink);color:var(--ivory);padding:26px 0}
+  .statbar-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .stat{flex:1;min-width:140px;text-align:center}
+  .stat .n{font-family:var(--display);font-size:clamp(28px,3.4vw,40px);font-weight:600;line-height:1}
+  .stat .n .gold{color:var(--gold-soft)}
+  .stat .l{font-size:13px;color:rgba(248,243,234,.65);margin-top:6px;letter-spacing:.01em}
+  .stat+.stat{border-left:1px solid rgba(248,243,234,.14)}
+
+  /* ===== sections ===== */
+  section{padding:78px 0}
+  .sec-head{max-width:680px;margin-bottom:42px}
+  .kicker{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--crimson);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+  .kicker::before{content:"";width:26px;height:2px;background:var(--crimson)}
+  .sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,3.8vw,46px);line-height:1.05;letter-spacing:-.02em}
+  .sec-head p{font-size:17px;color:var(--ink-soft);margin-top:16px}
+
+  /* results */
+  #results{background:var(--ivory-2)}
+  .results-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:start}
+  .score-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .score-tile{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:15px 12px;text-align:center;transition:transform .2s, box-shadow .2s}
+  .score-tile:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+  .score-tile .v{font-family:var(--display);font-size:27px;font-weight:600;color:var(--crimson);line-height:1}
+  .score-tile .nm{font-size:11.5px;color:var(--ink-soft);margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .score-foot{margin-top:16px;font-size:13.5px;color:var(--ink-soft)}
+  .featured{background:var(--ink);color:var(--ivory);border-radius:20px;padding:30px;box-shadow:var(--shadow)}
+  .featured .rep-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:16px;border-bottom:1px solid rgba(248,243,234,.18)}
+  .featured .cb{font-weight:700;font-size:13px;letter-spacing:.02em}
+  .featured .cb span{display:block;font-weight:400;color:rgba(248,243,234,.6);font-size:11.5px;margin-top:2px}
+  .featured .who{text-align:right;font-size:13px}
+  .featured .who span{display:block;color:rgba(248,243,234,.6);font-size:11px}
+  .featured .big{display:flex;align-items:baseline;gap:8px;margin:18px 0 16px}
+  .featured .big .num{font-family:var(--display);font-size:64px;font-weight:600;line-height:.9}
+  .featured .big .max{color:rgba(248,243,234,.55);font-size:18px}
+  .featured .bd{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .featured .bd .cell{background:rgba(248,243,234,.06);border-radius:11px;padding:13px}
+  .featured .bd .cell .lab{font-size:11.5px;color:rgba(248,243,234,.65)}
+  .featured .bd .cell .sc{font-family:var(--display);font-size:26px;font-weight:600;color:var(--gold-soft);margin-top:2px}
+  .featured .bar{height:5px;background:rgba(248,243,234,.14);border-radius:5px;margin-top:9px;overflow:hidden}
+  .featured .bar i{display:block;height:100%;background:var(--gold)}
+  .featured .quote{font-family:var(--display);font-style:italic;font-size:16px;margin-top:20px;color:rgba(248,243,234,.92);line-height:1.4}
+
+  /* offer */
+  #offer{background:var(--crimson);color:#fff;position:relative;overflow:hidden}
+  #offer::after{content:"YNWA";position:absolute;right:-2vw;bottom:-3vw;font-family:var(--display);font-size:22vw;font-weight:700;color:rgba(255,255,255,.05);pointer-events:none;line-height:.8}
+  .offer-wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .offer-wrap .kicker{color:var(--gold-soft)}
+  .offer-wrap .kicker::before{background:var(--gold-soft)}
+  .offer-wrap h2{font-family:var(--display);font-size:clamp(32px,4vw,50px);font-weight:600;line-height:1.04;letter-spacing:-.02em}
+  .offer-wrap h2 s{color:rgba(255,255,255,.5)}
+  .offer-wrap .sub{font-size:17px;color:rgba(255,255,255,.85);margin:18px 0 24px;max-width:480px}
+  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px}
+  .checklist div{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+  .checklist .ck{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:12px;color:var(--gold-soft);font-weight:700}
+  .offer-card{background:#fff;color:var(--ink);border-radius:20px;padding:30px;text-align:center;box-shadow:var(--shadow)}
+  .offer-card .partner{font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--gold);text-transform:uppercase}
+  .offer-card .price{font-family:var(--display);font-size:58px;font-weight:600;color:var(--crimson);line-height:1;margin:10px 0 4px}
+  .offer-card .price s{font-size:24px;color:var(--ink-soft)}
+  .offer-card .cond{font-size:14px;color:var(--ink-soft);margin-bottom:20px}
+  .offer-card .btn{width:100%}
+
+  /* why us */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .why-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .22s, box-shadow .22s}
+  .why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+  .why-card .ic{font-family:var(--display);font-size:28px;font-weight:600;color:var(--crimson);width:58px;height:58px;border-radius:14px;background:rgba(158,44,59,.08);display:grid;place-items:center;margin-bottom:16px;line-height:1}
+  .why-card h4{font-family:var(--display);font-size:21px;font-weight:600;margin-bottom:8px}
+  .why-card p{font-size:14.5px;color:var(--ink-soft)}
+
+  /* testimonials */
+  #voices{background:var(--ivory-2)}
+  .tcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .tcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column}
+  .tcard .q{font-family:var(--display);font-size:38px;color:var(--gold);line-height:.6;height:20px}
+  .tcard p{font-size:14.5px;color:var(--ink);margin:8px 0 18px;flex:1}
+  .tcard .ftr{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px}
+  .tcard .ftr .nm{font-weight:700;font-size:14px}
+  .tcard .ftr .uni{font-size:12.5px;color:var(--ink-soft)}
+  .tcard .ftr .badge{margin-left:auto;font-family:var(--mono);font-size:12px;font-weight:600;color:#fff;background:var(--crimson);padding:5px 10px;border-radius:8px;white-space:nowrap}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+  .step{position:relative;padding:28px 24px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);font-size:40px;font-weight:600;color:var(--gold);opacity:.4;display:block;margin-bottom:8px}
+  .step h4{font-family:var(--display);font-size:21px;font-weight:600;margin-bottom:7px}
+  .step p{font-size:14.5px;color:var(--ink-soft)}
+  .guarantee{margin-top:26px;background:var(--ink);color:var(--ivory);border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:18px}
+  .guarantee .g-ic{font-size:32px}
+  .guarantee b{color:var(--gold-soft)}
+
+  /* faq */
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;padding:22px 0;font-family:var(--display);font-size:20px;font-weight:600}
+  .faq-q .tog{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:18px;color:var(--crimson);transition:transform .25s}
+  .faq-item.open .tog{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--ink-soft);font-size:15.5px}
+  .faq-item.open .faq-a{max-height:340px;padding-bottom:22px}
+
+  /* final / registration */
+  #register{background:var(--ink);color:var(--ivory);position:relative;overflow:hidden;scroll-margin-top:80px}
+  #register::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 80% 120%,rgba(190,155,69,.18),transparent 60%)}
+  .final-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .final-grid h2{font-family:var(--display);font-size:clamp(32px,4vw,52px);font-weight:600;line-height:1.02;letter-spacing:-.02em}
+  .final-grid .sub{font-size:18px;color:rgba(248,243,234,.78);margin:18px 0 4px;max-width:480px}
+  .final-grid .motto{font-family:var(--display);font-style:italic;font-size:19px;color:var(--gold-soft);margin-top:22px}
+  #register .form-card{color:var(--ink)}
+
+  /* footer */
+  footer{background:#160B0E;color:rgba(248,243,234,.7);padding:48px 0 28px;font-size:14px}
+  .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:30px}
+  .foot-brand .logo{font-family:var(--display);font-size:24px;color:var(--ivory);font-weight:600}
+  .foot-brand .mt{color:var(--gold-soft);font-style:italic;font-family:var(--display);margin-top:6px}
+  .foot-col h5{color:var(--ivory);font-size:13px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
+  .foot-col a{display:block;color:rgba(248,243,234,.7);margin-bottom:8px;transition:color .2s}
+  .foot-col a:hover{color:var(--gold-soft)}
+  .foot-bot{border-top:1px solid rgba(248,243,234,.12);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:rgba(248,243,234,.5)}
+
+  /* sticky mobile cta — hidden until the user scrolls past the hero */
+  .mcta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(248,243,234,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px;box-shadow:0 -8px 24px -16px rgba(30,16,20,.4);transform:translateY(130%);opacity:0;transition:transform .32s ease, opacity .32s ease;pointer-events:none}
+  .mcta.show{transform:none;opacity:1;pointer-events:auto}
+  .mcta .btn{width:100%}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* responsive */
+  @media(max-width:980px){
+    .nav-links{display:none}
+    .results-grid,.offer-wrap,.final-grid{grid-template-columns:1fr;gap:36px}
+    .why-grid,.tcards,.steps{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:680px){
+    section{padding:52px 0}
+    .why-grid,.tcards,.steps,.checklist{grid-template-columns:1fr}
+    .score-wall{grid-template-columns:repeat(3,1fr)}
+    .stat+.stat{border-left:0}
+    .statbar-grid{gap:20px 8px}
+    .stat{min-width:42%}
+    .mcta{display:block}
+    .nav .btn-primary{display:none}      /* mobile nav = logo + EN/UZ only */
+    .featured .big .num{font-size:52px}
+    .hero{padding:56px 0 60px}
+    h1.hero-title{font-size:clamp(38px,9.5vw,84px);margin:22px 0 18px}
+    .hero-sub{font-size:16.5px}
+    .hero-sub.sub-desktop{display:none}
+    .hero-sub.sub-mobile{display:block}
+    .hero-ctas .btn-primary{width:100%}
+    .eyebrow{font-size:11px;padding:6px 12px;letter-spacing:.03em;gap:7px}
+    .field input,.field select{font-size:16px}   /* prevents iOS zoom on focus */
+    .form-card{padding:24px 20px 22px}
+    .form-card::before{left:20px;right:20px}
+    .brand{font-size:19px;gap:8px}
+    .brand-logo{height:28px}
+    .nav-right{gap:10px}
+    .nav-inner{padding:12px 0}
+    .sec-head{margin-bottom:30px}
+    .sec-head p{font-size:15.5px}
+    .offer-wrap .sub,.final-grid .sub{font-size:16px}
+    .featured,.offer-card{padding:24px}
+    .guarantee{flex-direction:column;text-align:center;gap:10px;padding:22px}
+    .faq-q{font-size:18px}
+    .foot-grid{gap:28px}
+    .topbar{font-size:12px;padding:9px 14px}
+  }
+  @media(max-width:380px){
+    .score-chips .chip span{display:none}
+    .container{width:94vw}
+  }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTP5FKG2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTP5FKG2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="brand"><svg class="brand-logo" id="satEmblem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.29 289.68">
+  <defs>
+    <style>
+      .satl1, .satl2 {
+        stroke-width: 0px;
+      }
+
+      .satl2 {
+        fill: #a22135;
+      }
+    .satl1{fill:#1E1014}
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="satl2" d="m18.45,140.89l-4.3,2.02,4.19,2.23-1.55,2.53-3.86-2.7.16,4.73-2.96-.07.4-4.76-4.03,2.54-1.38-2.6,4.3-2.02-4.23-2.23,1.55-2.53,3.9,2.74-.16-4.77,2.96.07-.4,4.76,4.03-2.54,1.38,2.6Z"/>
+      <path class="satl2" d="m269.8,140.36l-4.3,2.02,4.19,2.23-1.55,2.53-3.86-2.7.16,4.73-2.96-.07.4-4.76-4.03,2.54-1.38-2.6,4.3-2.02-4.23-2.23,1.55-2.53,3.9,2.74-.16-4.77,2.96.07-.4,4.76,4.03-2.54,1.38,2.6Z"/>
+      <g>
+        <g>
+          <path class="satl2" d="m173.88,161l-4.91-4.92-7.99,7.97-1.21-4.61-6.72,1.76,2.87,10.93-4.61-1.26-1.83,6.71,10.94,2.98-3.39,3.36,4.9,4.93,8.03-7.97,1.22,4.59,6.72-1.78-2.89-10.92,4.61,1.24,1.81-6.71-10.92-2.95,3.38-3.37Zm-5.74,9.93l5.77,1.56-5.77,1.53,1.53,5.78-4.21-4.24-4.25,4.22,1.57-5.77-5.75-1.57,5.75-1.51-1.5-5.73,4.18,4.19,4.22-4.21-1.55,5.75Z"/>
+          <path class="satl2" d="m74.35,80.07l-.09,82.54.04.81c1.14,34.84,29.35,62.16,64.23,62.2,34.88.04,63.16-27.22,64.37-62.06l.05-1.25.05-42.22v-9.64s.04-30.25.04-30.25l-128.68-.14Zm118.62,82.12l-.04,1.03c-.49,14.12-6.37,27.32-16.55,37.17-10.2,9.86-23.64,15.29-37.84,15.27-9.37-.01-18.41-2.39-26.4-6.85l.03-28.12,20.72.02h9.64s.01-9.63.01-9.63l.02-20.72,20.72.02v.04s9.64.01,9.64.01v-.04s.01-9.64.01-9.64l.02-20.68,20.05.02-.05,42.09Zm-19.99-51.76h-9.64s-.01,9.63-.01,9.63l-.02,20.68-20.72-.02h-9.64s-.01,9.63-.01,9.63l-.02,20.72-20.72-.02h-9.64s-.01,9.63-.01,9.63l-.02,21.27c-.6-.53-1.19-1.08-1.77-1.64-10.16-9.87-16.01-23.08-16.47-37.2l-.03-1.12.08-71.93,108.74.12-.02,20.28-20.06-.02Z"/>
+          <polygon class="satl2" points="92.95 131.02 92.94 140.66 113.66 140.68 113.63 161.4 123.27 161.41 123.3 140.69 123.31 131.05 113.67 131.04 92.95 131.02"/>
+          <path class="satl2" d="m123.32,117.07c0-3.7-2.99-6.7-6.69-6.7l-23.67-.03v9.64s30.35.03,30.35.03l30.36.03v-9.64s-23.65-.03-23.65-.03c-3.7,0-6.7,2.99-6.7,6.69Z"/>
+        </g>
+        <g>
+          <g>
+            <path class="satl1" d="m8.28,84.07l5.08,1.9-5.35,14.33c-.73,1.95.17,3.53,1.56,4.05,1.17.44,2.66.16,3.64-1.26l6.46-9.61c2.74-4.02,6.92-4.74,10.22-3.51,4.13,1.54,7.11,6.02,5.01,11.62l-5.71,15.29-5.08-1.9,5.63-15.07c.76-2.04-.32-3.78-1.8-4.33-1.22-.46-2.87-.13-3.88,1.37l-6.48,9.66c-2.67,3.95-6.77,4.6-9.98,3.4-4-1.49-6.83-5.82-4.79-11.29l5.47-14.64Z"/>
+            <path class="satl1" d="m53.84,70.35l-7.84-1.92-8.16,11.21,4.26,6.83-3.6,4.95-17.43-28.85,3.6-4.95,32.85,7.66-3.68,5.06Zm-18.88,4.67l5.73-7.87-12.57-3.06,6.84,10.94Z"/>
+            <path class="satl1" d="m56.7,26.11l3.5,4.14-8.25,6.97,16.55,19.58-4.21,3.56-16.55-19.58-8.25,6.97-3.5-4.14,20.72-17.51Z"/>
+            <path class="satl1" d="m97.87,39.29l-6.07-5.31-12.41,6.19.64,8.03-5.48,2.73-2.16-33.64,5.48-2.73,25.61,21.95-5.6,2.79Zm-18.91-4.56l8.71-4.35-9.74-8.51,1.02,12.86Z"/>
+            <path class="satl1" d="m123.78,1.09l1.02,5.33-15.03,2.88c-2.05.39-2.93,1.98-2.65,3.44.24,1.23,1.25,2.36,2.97,2.45l11.57.52c4.86.25,7.65,3.44,8.31,6.91.83,4.33-1.45,9.2-7.32,10.33l-16.03,3.07-1.02-5.33,15.8-3.03c2.14-.41,3.06-2.24,2.77-3.79-.25-1.28-1.38-2.52-3.19-2.6l-11.62-.51c-4.76-.22-7.45-3.39-8.09-6.76-.8-4.19,1.42-8.87,7.16-9.96l15.35-2.94Z"/>
+            <path class="satl1" d="m161.01,1.99l5.5.5-2.84,30.94-5.5-.5,1.21-13.25-16.16-1.48-1.21,13.25-5.54-.51,2.84-30.94,5.54.51-1.13,12.33,16.16,1.48,1.13-12.33Z"/>
+            <path class="satl1" d="m196.04,25.55c3.91,1.59,4.91,4.3,3.39,8.04l-4.68,11.51-5.15-2.1,4.26-10.48c.52-1.29.11-2.11-1.18-2.63l-12.07-4.91-5.01,12.32-5.15-2.1,11.71-28.77,5.15,2.1-4.7,11.55,7.86,3.2,10.88-9.04,5.67,2.31-11.01,8.98.04.02Z"/>
+            <path class="satl1" d="m200.44,48.71l18.98-24.58,18.53,14.31-3.32,4.29-14.13-10.91-4.33,5.61,12.77,9.86-3.2,4.15-12.77-9.86-4.82,6.24,14.13,10.91-3.31,4.29-18.53-14.31Z"/>
+            <path class="satl1" d="m261.8,67.37l3.26,4.51-25.16,18.22-3.26-4.51,8.73-27.79-18.93,13.7-3.26-4.51,25.16-18.22,3.81,5.26-8.11,26.19,17.76-12.86Z"/>
+            <path class="satl1" d="m280.29,109.07l-5.1,1.83-3.65-10.16-24.13,8.67-1.87-5.19,24.13-8.67-3.65-10.16,5.1-1.83,9.17,25.52Z"/>
+          </g>
+          <g>
+            <path class="satl1" d="m37.39,198.04l-4.98,2.05-5.79-14.05c-.79-1.92-2.51-2.45-3.87-1.89-1.15.47-2.04,1.69-1.79,3.38l1.79,11.36c.73,4.78-1.83,8.13-5.07,9.46-4.05,1.67-9.24.42-11.5-5.07l-6.18-14.99,4.98-2.05,6.09,14.78c.82,2,2.79,2.54,4.24,1.94,1.19-.49,2.18-1.84,1.9-3.62l-1.81-11.41c-.73-4.68,1.82-7.92,4.97-9.22,3.92-1.61,8.91-.38,11.12,4.98l5.91,14.35Z"/>
+            <path class="satl1" d="m29.46,240.07l4.04-6.92-8.37-10.93-7.71,2.13-3.69-4.83,32.39-8.43,3.69,4.83-16.58,29.09-3.78-4.94Zm.89-19.29l5.88,7.68,6.47-11.09-12.35,3.41Z"/>
+            <path class="satl1" d="m76.54,240.88l-3.42,4.16-8.29-6.82-16.18,19.66-4.23-3.48,16.18-19.66-8.29-6.82,3.42-4.16,20.8,17.12Z"/>
+            <path class="satl1" d="m83.33,278.56l.55-8-12.36-6.09-5.96,5.33-5.45-2.69,25.29-21.95,5.45,2.69-1.94,33.45-5.58-2.75Zm-7.77-17.69l8.68,4.27.87-12.82-9.55,8.55Z"/>
+            <path class="satl1" d="m127.69,258.25l-1.02,5.29-14.92-2.89c-2.03-.39-3.43.74-3.71,2.19-.24,1.22.29,2.64,1.84,3.36l10.48,4.75c4.39,2.02,5.78,6,5.11,9.43-.83,4.3-4.73,7.95-10.56,6.82l-15.92-3.08,1.02-5.29,15.69,3.04c2.12.41,3.65-.93,3.95-2.47.25-1.27-.34-2.83-1.98-3.57l-10.52-4.76c-4.31-1.96-5.62-5.87-4.97-9.22.81-4.16,4.58-7.65,10.27-6.55l15.24,2.95Z"/>
+            <path class="satl1" d="m155.25,257.28l5.47-.41,2.33,30.77-5.46.41-1-13.18-16.07,1.22,1,13.18-5.51.42-2.33-30.77,5.51-.42.93,12.26,16.07-1.22-.93-12.26Z"/>
+            <path class="satl1" d="m189.64,259.98c3.92-1.48,6.48-.18,7.9,3.56l4.37,11.55-5.17,1.95-3.98-10.51c-.49-1.29-1.35-1.61-2.64-1.12l-12.11,4.58,4.68,12.37-5.17,1.95-10.91-28.87,5.17-1.95,4.38,11.59,7.88-2.98,1.82-13.93,5.69-2.15-1.95,13.98.04-.02Z"/>
+            <path class="satl1" d="m213.99,268.25l-18.01-25.05,18.88-13.58,3.15,4.37-14.39,10.35,4.11,5.72,13.01-9.36,3.04,4.22-13.01,9.36,4.57,6.36,14.39-10.35,3.15,4.37-18.88,13.58Z"/>
+            <path class="satl1" d="m232.84,208.59l3.45-4.32,24.11,19.26-3.45,4.32-28.92-1,18.14,14.49-3.45,4.32-24.11-19.27,4.03-5.04,27.23.83-17.02-13.6Z"/>
+            <path class="satl1" d="m248.52,176.4l4.96,2.1-4.18,9.88,23.46,9.93-2.14,5.05-23.46-9.93-4.18,9.88-4.96-2.1,10.5-24.81Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg><span class="brand-name">SATashkent</span></a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#results" data-en="Results" data-uz="Natijalar">Results</a>
+        <a href="#offer" data-en="Free offer" data-uz="Bepul taklif">Free offer</a>
+        <a href="#why" data-en="Why us" data-uz="Nega biz">Why us</a>
+        <a href="#voices" data-en="Stories" data-uz="Hikoyalar">Stories</a>
+        <a href="#faq" data-en="FAQ" data-uz="FAQ">FAQ</a>
+      </div>
+      <div class="lang">
+        <button class="on" onclick="setLang('en',this)">EN</button>
+        <button onclick="setLang('uz',this)">UZ</button>
+      </div>
+      <button class="btn btn-primary nav-cta" onclick="scrollForm()" data-en="Register →" data-uz="Ro'yxatdan o'tish →">Register →</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow reveal"><span class="dot"></span><span data-en="Central Asia's #1 college-prep community" data-uz="Markaziy Osiyodagi #1 kollej tayyorlov jamiyati">Central Asia's #1 college-prep community</span></span>
+    <h1 class="hero-title reveal" style="transition-delay:.06s">
+      <span data-en="Score 1500+" data-uz="1500+ ball">Score 1500+</span><br>
+      <span class="line2" data-en="Walk into your dream university" data-uz="Orzungizdagi universitetga kiring">Walk into your dream university</span>
+    </h1>
+    <p class="hero-sub sub-desktop reveal" style="transition-delay:.12s" data-en="Leading SAT &amp; Admissions team. <b>10,000+ students</b>, alumni at Cornell, Dartmouth, UChicago &amp; NYU Abu Dhabi +50 on full scholarships." data-uz="Yetakchi SAT va Admissions jamoasi. <b>10,000+ talaba</b>, Cornell, Dartmouth, UChicago va NYU Abu Dhabi bitiruvchilari +50 to'liq grant bilan.">Leading SAT &amp; Admissions team. <b>10,000+ students</b>, alumni at Cornell, Dartmouth, UChicago &amp; NYU Abu Dhabi +50 on full scholarships.</p>
+    <p class="hero-sub sub-mobile reveal" style="transition-delay:.12s" data-en="<b>100+ students</b> with full scholarships. <b>170+</b> SAT 1500+ results." data-uz="<b>100+ talaba</b> to'liq grant bilan. <b>170+</b> SAT 1500+ natija."><b>100+ students</b> with full scholarships. <b>170+</b> SAT 1500+ results.</p>
+    <div class="hero-ctas reveal" style="transition-delay:.18s">
+      <button class="btn btn-primary" onclick="scrollForm()" data-en="Register — first lesson is free" data-uz="Ro'yxatdan o'ting — birinchi dars bepul">Register — first lesson is free</button>
+    </div>
+    <div class="hero-proof reveal" style="transition-delay:.3s">
+      <div class="hero-trust"><span class="stars">★★★★★</span><span data-en="Trusted by 10,000+ students" data-uz="10,000+ talaba ishonadi">Trusted by 10,000+ students</span></div>
+      <div class="score-chips">
+        <span class="chip">1590<span>Ansor</span></span>
+        <span class="chip">1580<span>Muhammadali</span></span>
+        <span class="chip">1570<span>Jamshidbek</span></span>
+        <span class="chip">1550<span>Donobek</span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STAT BAR -->
+<div class="statbar">
+  <div class="container statbar-grid">
+    <div class="stat"><div class="n">10,000<span class="gold">+</span></div><div class="l" data-en="students taught" data-uz="o'qigan talabalar">students taught</div></div>
+    <div class="stat"><div class="n">32</div><div class="l" data-en="countries reached" data-uz="mamlakatlar">countries reached</div></div>
+    <div class="stat"><div class="n">1590</div><div class="l" data-en="top SAT score" data-uz="eng yuqori SAT ball">top SAT score</div></div>
+    <div class="stat"><div class="n">1520<span class="gold">+</span></div><div class="l" data-en="every teacher's SAT" data-uz="har bir ustoz SAT">every teacher's SAT</div></div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker" data-en="The proof" data-uz="Isbot">The proof</div>
+      <h2 data-en="Real students. Real scores. All on file" data-uz="Haqiqiy talabalar. Haqiqiy ballar">Real students. Real scores. All on file</h2>
+      <p data-en="Half of our students score 1450+. Here are just a few of the latest results from the last intake." data-uz="Talabalarimizning yarmi 1450+ to'playdi. Quyida so'nggi natijalardan ba'zilari.">Half of our students score 1450+. Here are just a few of the latest results from the last intake.</p>
+    </div>
+    <div class="results-grid">
+      <div class="reveal">
+        <div class="score-wall">
+          <div class="score-tile"><div class="v">1590</div><div class="nm">Ansor K.</div></div>
+          <div class="score-tile"><div class="v">1580</div><div class="nm">Muhammadali</div></div>
+          <div class="score-tile"><div class="v">1570</div><div class="nm">Jamshidbek</div></div>
+          <div class="score-tile"><div class="v">1550</div><div class="nm">Donobek Q.</div></div>
+          <div class="score-tile"><div class="v">1550</div><div class="nm">Shaxlo E.</div></div>
+          <div class="score-tile"><div class="v">1540</div><div class="nm">Omadbek O.</div></div>
+          <div class="score-tile"><div class="v">1520</div><div class="nm">Zafar K.</div></div>
+          <div class="score-tile"><div class="v">1510</div><div class="nm">Behruz O.</div></div>
+          <div class="score-tile"><div class="v">1500</div><div class="nm">Nia</div></div>
+        </div>
+        <p class="score-foot" data-en="…and hundreds more. Top scorers earn free admissions coaching." data-uz="…va yana yuzlab. Eng yuqori ballar bepul admissions oladi.">…and hundreds more. Top scorers earn free admissions coaching.</p>
+      </div>
+      <div class="featured reveal">
+        <div class="rep-top">
+          <div class="cb">College Board<span data-en="SAT Score Report" data-uz="SAT ball hisoboti">SAT Score Report</span></div>
+          <div class="who">Ansor Khasanov<span data-en="Nov 2025" data-uz="Noy 2025">Nov 2025</span></div>
+        </div>
+        <div class="big"><span class="num">1590</span><span class="max">/ 1600</span></div>
+        <div class="bd">
+          <div class="cell"><div class="lab" data-en="Reading &amp; Writing" data-uz="O'qish va yozish">Reading &amp; Writing</div><div class="sc">790</div><div class="bar"><i style="width:99%"></i></div></div>
+          <div class="cell"><div class="lab">Math</div><div class="sc">800</div><div class="bar"><i style="width:100%"></i></div></div>
+        </div>
+        <p class="quote" data-en="“SATashkent didn't just help me score higher — it helped me grow into a creator who contributes to the community.”" data-uz="“SATashkent menga shunchaki yuqori ball emas — jamiyatga hissa qo'shadigan inson bo'lishga yordam berdi.”">“SATashkent didn't just help me score higher — it helped me grow into a creator who contributes to the community.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section id="offer">
+  <div class="container offer-wrap">
+    <div class="reveal">
+      <div class="kicker" data-en="In partnership with UNLOCK" data-uz="UNLOCK hamkorligida">In partnership with UNLOCK</div>
+      <h2 data-en="Score 1500+. Get admissions coaching for <s>$1,500</s> free" data-uz="1500+ ball. Admissions kochingni <s>$1,500</s> bepul oling">Score 1500+. Get admissions coaching for <s>$1,500</s> free</h2>
+      <p class="sub" data-en="The SAT is only half the journey. Hit 1500+ with us and we hand you the full admissions program — the same one that put our alumni on full rides at top universities." data-uz="SAT — yo'lning yarmi. Biz bilan 1500+ to'plang va to'liq admissions dasturini oling — bu bizning bitiruvchilarni top universitetlarga grant bilan kirgizgan dastur.">The SAT is only half the journey. Hit 1500+ with us and we hand you the full admissions program — the same one that put our alumni on full rides at top universities.</p>
+      <div class="checklist">
+        <div><span class="ck">✓</span><span data-en="Academic planning" data-uz="Akademik rejalashtirish">Academic planning</span></div>
+        <div><span class="ck">✓</span><span data-en="Essay writing &amp; review" data-uz="Esse yozish va ko'rib chiqish">Essay writing &amp; review</span></div>
+        <div><span class="ck">✓</span><span data-en="Extracurricular strategy" data-uz="Qo'shimcha faoliyat strategiyasi">Extracurricular strategy</span></div>
+        <div><span class="ck">✓</span><span data-en="School list building" data-uz="Maktab ro'yxati tuzish">School list building</span></div>
+        <div><span class="ck">✓</span><span data-en="Interview preparation" data-uz="Suhbatga tayyorgarlik">Interview preparation</span></div>
+        <div><span class="ck">✓</span><span data-en="Offer negotiation support" data-uz="Taklif muzokara yordami">Offer negotiation support</span></div>
+      </div>
+    </div>
+    <div class="offer-card reveal">
+      <div class="partner" data-en="Admissions program" data-uz="Admissions dasturi">Admissions program</div>
+      <div class="price"><s>$1,500</s></div>
+      <div class="cond" data-en="$0 for students who score 1500+ with SATashkent" data-uz="SATashkent bilan 1500+ to'plaganlar uchun $0">$0 for students who score 1500+ with SATashkent</div>
+      <button class="btn btn-gold" onclick="scrollForm()" data-en="Start my journey →" data-uz="Sayohatimni boshlash →">Start my journey →</button>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker" data-en="Why SATashkent" data-uz="Nega SATashkent">Why SATashkent</div>
+      <h2 data-en="More than a course. A system built to win" data-uz="Kursdan ko'proq. G'alaba uchun tizim">More than a course. A system built to win</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="ic">📚</div><h4 data-en="32,000+ questions" data-uz="32,000+ savol">32,000+ questions</h4><p data-en="Real Bluebook-format digital SAT practice on our own platform. You'll never run out." data-uz="O'z platformamizda haqiqiy Bluebook formatidagi raqamli SAT mashqlari. Hech qachon tugamaydi.">Real Bluebook-format digital SAT practice on our own platform. You'll never run out.</p></div>
+      <div class="why-card reveal"><div class="ic">👥</div><h4 data-en="Small classes" data-uz="Kichik guruhlar">Small classes</h4><p data-en="Max 15–20 students per class so every student gets real, personalized attention." data-uz="Har bir guruhda 15–20 ta talaba — har kimga shaxsiy e'tibor.">Max 15–20 students per class so every student gets real, personalized attention.</p></div>
+      <div class="why-card reveal"><div class="ic">🤝</div><h4 data-en="Weekly support" data-uz="Haftalik yordam">Weekly support</h4><p data-en="6 academic + 2 admissions 1-on-1 support sessions every single week." data-uz="Har hafta 6 akademik + 2 admissions 1-ga-1 sessiya.">6 academic + 2 admissions 1-on-1 support sessions every single week.</p></div>
+      <div class="why-card reveal"><div class="ic">🎓</div><h4 data-en="Elite teachers" data-uz="Eng yaxshi ustozlar">Elite teachers</h4><p data-en="Every teacher scored 1520+ on the SAT. You learn from people who've actually done it." data-uz="Har bir ustoz SATda 1520+ to'plagan. Buni amalda qilganlardan o'rganasiz.">Every teacher scored 1520+ on the SAT. You learn from people who've actually done it.</p></div>
+      <div class="why-card reveal"><div class="ic">📊</div><h4 data-en="Score analytics" data-uz="Ball analitikasi">Score analytics</h4><p data-en="See exactly where your points are leaking — domain by domain — and fix it fast." data-uz="Ballaringiz qayerda yo'qotilayotganini aniq ko'ring va tez tuzating.">See exactly where your points are leaking — domain by domain — and fix it fast.</p></div>
+      <div class="why-card reveal"><div class="ic">🫂</div><h4 data-en="A real community" data-uz="Haqiqiy jamiyat">A real community</h4><p data-en="YNWA. A brotherhood of ambitious students that makes big goals feel normal." data-uz="YNWA. Katta maqsadlarni oddiy his qildiradigan intiluvchan talabalar jamiyati.">YNWA. A brotherhood of ambitious students that makes big goals feel normal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICES -->
+<section id="voices">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker" data-en="Student stories" data-uz="Talaba hikoyalari">Student stories</div>
+      <h2 data-en="They started where you are now" data-uz="Ular ham hozir siz turgan joydan boshlashgan" >They started where you are now</h2>
+    </div>
+    <div class="tcards">
+      <div class="tcard reveal">
+        <div class="q">“</div>
+        <p data-en="From Tajikistan, where SAT prep is limited, SATashkent made my dreams come true. I wouldn't have this score without the community's support." data-uz="SAT resurslari cheklangan Tojikistondan kelib, SATashkent orzularimni ro'yobga chiqardi. Jamiyat yordamisiz bu natijaga erisha olmasdim.">From Tajikistan, where SAT prep is limited, SATashkent made my dreams come true. I wouldn't have this score without the community's support.</p>
+        <div class="ftr"><div><div class="nm">Nia</div><div class="uni" data-en="Cornell University" data-uz="Cornell University">Cornell University</div></div><div class="badge">SAT 1500</div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="q">“</div>
+        <p data-en="Moving from Surkhandarya to study at SATashkent felt like a huge risk — it turned out completely worth it. 1580 and a full ride to Colby." data-uz="Surxondaryodan kelib SATashkentda o'qish katta xavfdek tuyuldi — bu to'liq o'zini oqladi. 1580 va Colbyga to'liq grant.">Moving from Surkhandarya to study at SATashkent felt like a huge risk — it turned out completely worth it. 1580 and a full ride to Colby.</p>
+        <div class="ftr"><div><div class="nm">Muhammadali</div><div class="uni">Colby College · Full Ride</div></div><div class="badge">SAT 1580</div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="q">“</div>
+        <p data-en="Preparing for the SAT gave me more than a 1520 — it gave me community, support and belief in myself. My road to UChicago was never a solo journey." data-uz="SATga tayyorgarlik menga 1520 dan ko'proq berdi — jamiyat, yordam va o'zimga ishonch. UChicagoga yo'lim hech qachon yolg'iz bo'lmadi.">Preparing for the SAT gave me more than a 1520 — it gave me community, support and belief in myself. My road to UChicago was never a solo journey.</p>
+        <div class="ftr"><div><div class="nm">Munisa</div><div class="uni">UChicago · Full Ride</div></div><div class="badge">SAT 1520</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker" data-en="How it works" data-uz="Qanday ishlaydi">How it works</div>
+      <h2 data-en="Three steps to your first lesson" data-uz="Birinchi darsingizgacha uch qadam">Three steps to your first lesson</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h4 data-en="Book in 30 seconds" data-uz="30 soniyada belgilang">Book in 30 seconds</h4><p data-en="Fill the form. We reach out on Telegram within 2 hours — no payment needed." data-uz="Formani to'ldiring. 2 soat ichida Telegramda bog'lanamiz — to'lovsiz.">Fill the form. We reach out on Telegram within 2 hours — no payment needed.</p></div>
+      <div class="step reveal"><h4 data-en="Find your level" data-uz="Darajangizni aniqlang">Find your level</h4><p data-en="Take a free 20-minute placement test so we build the right plan for your target." data-uz="Bepul 20 daqiqalik test toping — sizga mos reja tuzamiz.">Take a free 20-minute placement test so we build the right plan for your target.</p></div>
+      <div class="step reveal"><h4 data-en="Try a free lesson" data-uz="Bepul darsni sinab ko'ring">Try a free lesson</h4><p data-en="Sit in on a real class. Love it? Continue. Don't? The trial stays free." data-uz="Haqiqiy darsda qatnashing. Yoqdimi? Davom eting. Yo'qmi? Sinov bepul.">Sit in on a real class. Love it? Continue. Don't? The trial stays free.</p></div>
+    </div>
+    <div class="guarantee reveal">
+      <div class="g-ic">🛡️</div>
+      <div data-en="<b>Zero risk.</b> The trial lesson is completely free if you decide not to continue." data-uz="<b>Hech qanday xavf yo'q.</b> Davom etmasangiz sinov darsi to'liq bepul."><b>Zero risk.</b> The trial lesson is completely free if you decide not to continue.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container" style="max-width:820px">
+    <div class="sec-head reveal" style="margin-bottom:24px">
+      <div class="kicker" data-en="Questions" data-uz="Savollar">Questions</div>
+      <h2 data-en="Everything you need to know" data-uz="Bilishingiz kerak bo'lgan hamma narsa">Everything you need to know</h2>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span data-en="Do you guarantee a high score?" data-uz="Yuqori ballni kafolatlaysizmi?">Do you guarantee a high score?</span><span class="tog">+</span></div>
+      <div class="faq-a"><p data-en="We don't promise a number — outcomes depend on your commitment. What we guarantee is top-quality teaching, a proven system, and full access to our alumni's real results as proof of what's possible." data-uz="Aniq raqam va'da qilmaymiz — natija sizning mehnatingizga bog'liq. Biz yuqori sifatli ta'lim, isbotlangan tizim va bitiruvchilarimizning haqiqiy natijalarini kafolatlaymiz.">We don't promise a number — outcomes depend on your commitment. What we guarantee is top-quality teaching, a proven system, and full access to our alumni's real results as proof of what's possible.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span data-en="What's the average SAT score of your students?" data-uz="Talabalaringizning o'rtacha SAT bali qancha?">What's the average SAT score of your students?</span><span class="tog">+</span></div>
+      <div class="faq-a"><p data-en="Half of our students score above 1450, with many reaching 1500–1590 — a reflection of their hard work and our teaching methods." data-uz="Talabalarimizning yarmi 1450 dan yuqori, ko'pchiligi 1500–1590 ga yetadi.">Half of our students score above 1450, with many reaching 1500–1590 — a reflection of their hard work and our teaching methods.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span data-en="Is the trial lesson really free?" data-uz="Sinov darsi rostdan bepulmi?">Is the trial lesson really free?</span><span class="tog">+</span></div>
+      <div class="faq-a"><p data-en="Yes. If you attend and decide not to continue, the trial lesson is free. If you continue, it's included in your first payment." data-uz="Ha. Qatnashib davom etmasangiz, sinov darsi bepul. Davom etsangiz, birinchi to'lovingizga kiradi.">Yes. If you attend and decide not to continue, the trial lesson is free. If you continue, it's included in your first payment.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span data-en="Do you teach online too?" data-uz="Onlayn ham o'qitasizmi?">Do you teach online too?</span><span class="tog">+</span></div>
+      <div class="faq-a"><p data-en="Yes — live Zoom classes worldwide and 1-on-1 individual options, with the same platform and support sessions as our Tashkent center." data-uz="Ha — dunyo bo'ylab jonli Zoom darslari va 1-ga-1 individual variantlar, Toshkent markazi bilan bir xil platforma va yordam.">Yes — live Zoom classes worldwide and 1-on-1 individual options, with the same platform and support sessions as our Tashkent center.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span data-en="What does the SAT + Admissions course cost?" data-uz="SAT + Admissions kursi qancha turadi?">What does the SAT + Admissions course cost?</span><span class="tog">+</span></div>
+      <div class="faq-a"><p data-en="Offline in Tashkent starts at 1.2M sums for one subject (2.0M for two), including 6 lessons/week and 8 weekly support sessions. Score 1500+ and the $1,500 admissions program is free." data-uz="Toshkentda offlayn bir fan uchun 1.2M so'mdan boshlanadi (ikki fan 2.0M), haftada 6 dars va 8 yordam sessiyasi bilan. 1500+ to'plang — $1,500 admissions dasturi bepul.">Offline in Tashkent starts at 1.2M sums for one subject (2.0M for two), including 6 lessons/week and 8 weekly support sessions. Score 1500+ and the $1,500 admissions program is free.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION -->
+<section id="register">
+  <div class="container final-grid">
+    <div class="reveal">
+      <div class="kicker" style="color:var(--gold-soft)" data-en="Start today" data-uz="Bugun boshlang">Start today</div>
+      <h2 data-en="Your dream university is closer than you think" data-uz="Orzungizdagi universitet o'ylaganingizdan yaqinroq">Your dream university is closer than you think</h2>
+      <p class="sub" data-en="Join Central Asia's largest college-prep community. Register below and our team will reach out to schedule everything." data-uz="Markaziy Osiyoning eng katta kollej tayyorlov jamiyatiga qo'shiling. Quyida ro'yxatdan o'ting — jamoamiz bog'lanib hammasini belgilaydi.">Join Central Asia's largest college-prep community. Register below and our team will reach out to schedule everything.</p>
+      <ul class="reg-list">
+        <li data-en="Free trial lesson" data-uz="Bepul sinov darsi">Free trial lesson</li>
+        <li data-en="Free 20-minute placement test" data-uz="Bepul 20 daqiqalik daraja testi">Free 20-minute placement test</li>
+        <li data-en="No payment to get started" data-uz="Boshlash uchun to'lov yo'q">No payment to get started</li>
+      </ul>
+      <p class="motto">You Will Never Walk Alone.</p>
+    </div>
+
+    <!-- LEAD / REGISTRATION FORM -->
+    <div class="form-card reveal" id="lead">
+      <div class="form-live">
+        <div class="form-head">
+          <h3 data-en="Register for your free trial" data-uz="Bepul darsga ro'yxatdan o'ting">Register for your free trial</h3>
+          <p data-en="Includes a free placement test — find your exact SAT level today." data-uz="Bepul daraja testi bilan — bugun SAT darajangizni aniqlang.">Includes a free placement test — find your exact SAT level today.</p>
+        </div>
+        <form id="leadForm" onsubmit="return submitLead(event)">
+          <div class="field">
+            <label data-en="Name" data-uz="Ism">Name</label>
+            <input type="text" name="name" required data-en-ph="e.g. Jasur Karimov" data-uz-ph="masalan, Jasur Karimov" placeholder="e.g. Jasur Karimov">
+          </div>
+          <div class="field">
+            <label data-en="Phone number" data-uz="Telefon raqami">Phone number</label>
+            <input type="tel" name="phone" required placeholder="+998 __ ___ __ __">
+          </div>
+          <div class="field">
+            <label data-en="Telegram username" data-uz="Telegram username">Telegram username</label>
+            <input type="text" name="telegram" data-en-ph="@username" data-uz-ph="@username" placeholder="@username">
+          </div>
+          <div class="field">
+            <label data-en="Your English level" data-uz="Ingliz tili darajangiz">Your English level</label>
+            <select name="english" required>
+              <option value="" disabled selected data-en="Choose your level" data-uz="Darajangizni tanlang">Choose your level</option>
+              <option value="Beginner" data-en="Beginner" data-uz="Beginner">Beginner</option>
+              <option value="Pre-Intermediate" data-en="Pre-Intermediate" data-uz="Pre-Intermediate">Pre-Intermediate</option>
+              <option value="Intermediate" data-en="Intermediate" data-uz="Intermediate">Intermediate</option>
+              <option value="Upper-Intermediate" data-en="Upper-Intermediate" data-uz="Upper-Intermediate">Upper-Intermediate</option>
+              <option value="Advanced" data-en="Advanced" data-uz="Advanced">Advanced</option>
+            </select>
+          </div>
+          <div class="field">
+            <label data-en="Which branch do you want to study at?" data-uz="Qaysi filialda o'qimoqchisiz?">Which branch do you want to study at?</label>
+            <select name="branch" required>
+              <option value="" disabled selected data-en="Choose a branch" data-uz="Filialni tanlang">Choose a branch</option>
+              <option value="Tashkent" data-en="Tashkent" data-uz="Toshkent">Tashkent</option>
+              <option value="Andijan" data-en="Andijan" data-uz="Andijon">Andijan</option>
+              <option value="Bukhara" data-en="Bukhara" data-uz="Buxoro">Bukhara</option>
+              <option value="Online" data-en="Online" data-uz="Onlayn">Online</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" data-en="Register now →" data-uz="Hozir ro'yxatdan o'ting →">Register now →</button>
+          <p class="form-fine" data-en="No payment now. No spam. Just a real plan to raise your score." data-uz="Hozir to'lov yo'q. Spam yo'q. Faqat ballingizni oshirish rejasi.">No payment now. No spam. Just a real plan to raise your score.</p>
+        </form>
+      </div>
+      <div class="form-success">
+        <div class="check">✓</div>
+        <h3 data-en="Thank you — application received 🎉" data-uz="Rahmat — arizangiz qabul qilindi 🎉">Thank you — application received 🎉</h3>
+        <p data-en="We've received your application. Our team will reach out shortly to schedule your free first lesson and placement test." data-uz="Arizangizni qabul qildik. Jamoamiz tez orada bog'lanib, bepul birinchi dars va daraja testini belgilaydi.">We've received your application. Our team will reach out shortly to schedule your free first lesson and placement test.</p>
+      </div>
+      <div class="form-reject">
+        <div class="check">💛</div>
+        <h3 data-en="Thank you for reaching out" data-uz="Murojaatingiz uchun rahmat">Thank you for reaching out</h3>
+        <p data-en="We're truly grateful you applied. Being honest with you: at your current English level, our SAT course wouldn't serve you well just yet — the SAT needs a strong English foundation first. We'd warmly encourage you to build your English up, and we'd love to welcome you back when you're ready. You're always part of the SATashkent family. 💛" data-uz="Ariza qoldirganingiz uchun chin dildan minnatdormiz. Sizga ochig'ini aytsak: hozirgi ingliz tili darajangizda SAT kursimiz sizga hali to'g'ri kelmaydi — SAT avvalo mustahkam ingliz tili poydevorini talab qiladi. Ingliz tilingizni mustahkamlab, tayyor bo'lganingizda qaytishingizni samimiy tavsiya qilamiz. Siz doimo SATashkent oilasining bir qismisiz. 💛">We're truly grateful you applied. Being honest with you: at your current English level, our SAT course wouldn't serve you well just yet — the SAT needs a strong English foundation first. We'd warmly encourage you to build your English up, and we'd love to welcome you back when you're ready. You're always part of the SATashkent family. 💛</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo">SATASHKENT</div>
+        <div class="mt">You Will Never Walk Alone</div>
+      </div>
+      <div class="foot-col">
+        <h5 data-en="Explore" data-uz="Ko'rish">Explore</h5>
+        <a href="#results" data-en="Results" data-uz="Natijalar">Results</a>
+        <a href="#offer" data-en="Free admissions" data-uz="Bepul admissions">Free admissions</a>
+        <a href="#why" data-en="Why us" data-uz="Nega biz">Why us</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h5 data-en="Community" data-uz="Jamiyat">Community</h5>
+        <a href="https://t.me/satashkent" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://www.instagram.com/satashkent/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://1600.satashkent.uz/" target="_blank" rel="noopener">1600.satashkent.uz</a>
+      </div>
+      <div class="foot-col">
+        <h5 data-en="Contact" data-uz="Aloqa">Contact</h5>
+        <a href="tel:+998917876575">📞 +998 91 787 65 75</a>
+        <a href="#" >📍 Tashkent, Uzbekistan</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 SATashkent. All rights reserved.</span>
+      <span data-en="Privacy Policy · Terms of Use" data-uz="Maxfiylik · Shartlar">Privacy Policy · Terms of Use</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="mcta">
+  <button class="btn btn-primary" onclick="scrollForm()" data-en="Register — first lesson is free" data-uz="Ro'yxatdan o'ting — birinchi dars bepul">Register — first lesson is free</button>
+</div>
+
+<script>
+  // ---- Albato lead webhook ----
+  const WEBHOOK_URL = 'https://h.albato.com/wh/38/1lf9dki/D4QLkQvUOdTuLRtBjJljLkMcVA3cx9V6MiALRmsSHbQ/';
+
+  // ---- capture UTM + ad-click params from the URL on load ----
+  const UTM = (function(){
+    const p = new URLSearchParams(location.search), o = {};
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid','gclid','ttclid'].forEach(function(k){
+      const v = p.get(k); if(v) o[k] = v;
+    });
+    return o;
+  })();
+
+  // ---- language toggle ----
+  function setLang(lang, btn){
+    document.querySelectorAll('[data-en]').forEach(el=>{
+      const v = el.getAttribute('data-'+lang) || el.getAttribute('data-en');
+      el.innerHTML = v;
+    });
+    document.querySelectorAll('[data-en-ph]').forEach(el=>{
+      el.placeholder = el.getAttribute('data-'+lang+'-ph') || el.getAttribute('data-en-ph');
+    });
+    document.querySelectorAll('option[data-en]').forEach(el=>{
+      el.textContent = el.getAttribute('data-'+lang) || el.getAttribute('data-en');
+    });
+    document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('on'));
+    if(btn) btn.classList.add('on');
+    document.documentElement.lang = lang;
+  }
+
+  // ---- smooth scroll to form ----
+  function scrollForm(){
+    document.getElementById('lead').scrollIntoView({behavior:'smooth', block:'center'});
+    const inp = document.querySelector('#leadForm input[name="name"]');
+    setTimeout(()=>{ if(inp) inp.focus(); }, 600);
+  }
+
+  // ---- FAQ accordion ----
+  function toggleFaq(el){
+    el.closest('.faq-item').classList.toggle('open');
+  }
+
+  // ---- lead form submit (front-end demo) ----
+  // NOTE FOR YOUR DEV TEAM: wire this to your CRM / Telegram bot / webhook
+  // (e.g. POST to your Alfa CRM endpoint or a Cloudflare Worker). Currently
+  // it just shows the success state and fires a GTM/dataLayer event.
+  function submitLead(e){
+    e.preventDefault();
+    const form = e.target;
+    const data = Object.fromEntries(new FormData(form).entries());
+    const card = form.closest('.form-card');
+
+    // Intermediate or above → qualified. Beginner / Pre-Intermediate → soft decline.
+    const lvl = (data.english || '').toLowerCase();
+    const notReady = (lvl === 'beginner' || lvl === 'pre-intermediate');
+
+    // ---- build the named payload sent to Albato (+ campaign data) ----
+    const payload = Object.assign({
+      Name:    data.name   || '',
+      Phone:   data.phone  || '',
+      Telegram:data.telegram|| '',
+      English: data.english|| '',
+      Branch:  data.branch || '',
+      Status:  notReady ? 'Below level' : 'Qualified',
+      page_url: location.href,
+      referrer: document.referrer || ''
+    }, UTM);
+
+    // ---- send to Albato webhook ----
+    // Albato's catcher reliably expands QUERY-STRING params into named fields
+    // (its body parser ignored our form-encoded body). Query params also keep
+    // this a "simple" cross-origin request, so it's delivered without CORS issues.
+    try{
+      const qs = new URLSearchParams(payload).toString();
+      fetch(WEBHOOK_URL + '?' + qs, { method:'POST', mode:'no-cors', keepalive:true });
+    }catch(err){ console.error('Webhook error:', err); }
+
+    // analytics hook — works with your existing GTM container
+    if(window.dataLayer){ window.dataLayer.push({event:'lead_submitted', lead:payload}); }
+
+    card.querySelector('.form-live').style.display = 'none';
+    if(notReady){
+      if(window.dataLayer){ window.dataLayer.push({event:'lead_below_level', lead:payload}); }
+      card.querySelector('.form-reject').style.display = 'block';
+    } else {
+      if(window.dataLayer){ window.dataLayer.push({event:'lead_qualified', lead:payload}); }
+      card.querySelector('.form-success').style.display = 'block';
+    }
+    card.scrollIntoView({behavior:'smooth', block:'center'});
+    return false;
+  }
+
+  // ---- scroll reveal ----
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // ---- sticky mobile CTA: appears only after scrolling past the hero, hides over the form ----
+  (function(){
+    const mcta = document.querySelector('.mcta');
+    const reg = document.getElementById('register');
+    if(!mcta) return;
+    function onScroll(){
+      const past = window.scrollY > (window.innerHeight * 0.7);
+      const regVisible = reg ? (reg.getBoundingClientRect().top < window.innerHeight * 0.9) : false;
+      mcta.classList.toggle('show', past && !regVisible);
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll, {passive:true});
+    onScroll();
+  })();
+</script>
+</body>
+</html>
